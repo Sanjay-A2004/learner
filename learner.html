@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Pencil Box Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f5fb;
+            color: #333;
+        }
+        .page {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 12px;
+            color: #1f4e79;
+        }
+        p {
+            line-height: 1.6;
+            margin: 0 0 24px;
+        }
+        .pencil-box {
+            position: relative;
+            width: 260px;
+            height: 120px;
+            margin: 0 auto;
+            background: #ffd55a;
+            border: 3px solid #f0b33e;
+            border-radius: 16px;
+        }
+        .pencil-box::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 16px;
+            height: 20px;
+            background: rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+        }
+        .pencil {
+            position: absolute;
+            bottom: 14px;
+            width: 18px;
+            height: 80px;
+            border-radius: 10px;
+            background: linear-gradient(180deg, #f65d5d 0%, #ffb347 100%);
+            border: 2px solid #cc4c4c;
+        }
+        .pencil::before {
+            content: "";
+            position: absolute;
+            top: -12px;
+            left: 0;
+            right: 0;
+            height: 18px;
+            background: #f6e7b5;
+            border-radius: 8px;
+            border: 2px solid #cc4c4c;
+        }
+        .pencil::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 1px;
+            right: 1px;
+            height: 10px;
+            background: #3a3f45;
+            border-radius: 0 0 4px 4px;
+        }
+        .pencil.one { left: 34px; transform: rotate(-6deg); }
+        .pencil.two { left: 112px; transform: rotate(4deg); }
+        .pencil.three { left: 190px; transform: rotate(-2deg); }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1>Simple Pencil Box Page</h1>
+        <p>This is a very simple web page made with HTML and CSS. It shows a pencil box and three pencils using only basic code.</p>
+        <div class="pencil-box">
+            <div class="pencil one"></div>
+            <div class="pencil two"></div>
+            <div class="pencil three"></div>
+        </div>
+    </div>
+</body>
+</html>
